@@ -1,0 +1,31 @@
+{
+  "name": "inicial",
+  "version": "1.0.0",
+  "description": "\"# inicial\" \r \"# inicial\"",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/app.js",
+    "start":"node src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/svrodela/inicial.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/svrodela/inicial/issues"
+  },
+  "homepage": "https://github.com/svrodela/inicial#readme",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "mongoose": "^6.6.0",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
