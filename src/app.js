@@ -14,7 +14,7 @@ app.set('views',path.join(__dirname,'views'));
 app.set('view engine','ejs');
 // conexion BD
  mongoose.connect('mongodb+srv://nuevo:FGr0tvWb1xwTzlao@clustersergio.ponuf.mongodb.net/escuela?retryWrites=true&w=majority')
- .then(bd=>confirm.log('la base se conectó')).catch(err=>console.log(err));
+ .then(bd => console.log('BD se conectó')).catch(err =>console.log(err));
 
 
 //middleware

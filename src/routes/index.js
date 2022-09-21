@@ -1,13 +1,15 @@
 const express = require('express');
 const router = express.Router();
-//const model = require('../model/valores')();
+const model = require('../model/valores')();
 
 const Valor = require('../model/valores');
 
-router.get('/',(req, res)=>{
-    res.render('index',{
-       nombre:'Sergio' 
-    })
+router.get('/', async (req, res) => {
+    const valores = await Valor.find();
+    console.log(valores);
+    res.render('index.ejs',{
+        valores
+    });
 });
 
 router.post('/add', async (req, res) => {
@@ -15,5 +17,4 @@ router.post('/add', async (req, res) => {
     await valor.save();
     res.redirect('/');
 });
-
 module.exports = router;
