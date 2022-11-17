@@ -12,9 +12,24 @@ router.get('/', async (req, res) => {
     });
 });
 
+router.get('/ver', async (req, res) => {
+    const valores = await Valor.find();
+    console.log(valores);
+    res.status(200).json({ reg: valores })
+});
+
+
 router.post('/add', async (req, res) => {
     const valor = new Valor(req.body);
+    console.log(req.body);
     await valor.save();
     res.redirect('/');
 });
+
+router.get('/del/:id', async(req,res)=>{
+    const {id}=req.params;
+    await Valor.findByIdAndRemove(id);
+    res.redirect('/');
+
+})
 module.exports = router;
